@@ -1,11 +1,23 @@
 const dialog = document.querySelector('dialog');
 const box = dialog.querySelector('.box');
+const btn_two = dialog.querySelector('.shto');
+const button = document.querySelector('.button')
+
+
+btn_two.onclick = () => {
+    dialog.close();
+  };
+
+  button.onclick = () => {
+        dialog.showModal();
+  };
+
 
 const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13]
 
 for(let item of arr) {
-        elem(item)
-    }
+    elem(item)
+}
 
 
 function elem(array) {
@@ -52,17 +64,12 @@ function elem(array) {
     first.append(minus);
     second.append(item);
     second.append(removebtn);
-
+    
     box2.append(first);
     box2.append(second);
-
+    
     box.append(box2);
 }
 
 elem(arr); 
 
-const button = document.querySelector(`.button`)
-
-button.onclick = () => {
-    dialog.showModal();
-}
